@@ -1,22 +1,16 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet
-} from "react-router-dom"
-import React, { useEffect } from 'react'
-import "./App.scss" 
-import Register from"./pages/Register/Register"
-import Login from "./pages/Login/Login"
-import MyStore from "./pages/MyStore/MyStore"
-import MyStoreEditor from "./pages/MyStoreEditor/MyStoreEditor"
-import MyProductEditor from "./pages/MyProductEditor/MyProductEditor"
-import Home from "./pages/Home/Home"
-import Products from "./pages/Products/Products"
-import Product from "./pages/Product/Product"
-import NavBar from "./components/NavBar/NavBar"
-import Footer from "./components/Footer/Footer"
-import Cart from "./pages/Cart/Cart"
-
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import "./App.scss";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import MyStore from "./pages/MyStore/MyStore";
+import MyStoreEditor from "./pages/MyStoreEditor/MyStoreEditor";
+import MyProductEditor from "./pages/MyProductEditor/MyProductEditor";
+import Home from "./pages/Home/Home";
+import Products from "./pages/Products/Products";
+import Product from "./pages/Product/Product";
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+import Cart from "./pages/Cart/Cart";
 
 // import RequireAuth from "./components/RequireAuth"
 // import PersistLogin from "./components/PersistLogin"
@@ -24,75 +18,75 @@ import Cart from "./pages/Cart/Cart"
 const Layout = () => {
   return (
     <div>
-      <NavBar/>
-      <Outlet/>
-      <Footer/>
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 const router = createBrowserRouter([
-  {  
-    path:"/",
-    element:<Layout/>,
-    children:[
-      { path:"/",
-        element: <Home/>
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
         //<PersistLogin element= {<RequireAuth element={ <Home /> } /> }/>
-        // <RequireAuth element={ <Home /> } /> 
-          
+        // <RequireAuth element={ <Home /> } />
       },
       {
-        path:"/products/:categoryName",
-        element: <Products/>
+        path: "/products/:categoryName",
+        element: <Products />,
       },
       {
-        path:"/product/:productId",
-        element:<Product/>
+        path: "/product/:productId",
+        element: <Product />,
       },
       {
-        path:"/register",
-        element:<Register/>
+        path: "/register",
+        element: <Register />,
       },
       {
-        path:"/login",
-        element:<Login/>
+        path: "/login",
+        element: <Login />,
       },
       {
-        path:"/my-store",
-        element:<MyStore/>
-      }, 
-      {
-        path:"/my-store/edit-store",
-        element:<MyStoreEditor/>
+        path: "/my-store",
+        element: <MyStore />,
       },
       {
-        path:"/my-store/register",
-        element:<MyStoreEditor/>
+        path: "/my-store/edit-store",
+        element: <MyStoreEditor />,
       },
       {
-        path:"/my-store/edit-product/:productId",
-        element:<MyProductEditor/>
+        path: "/my-store/register",
+        element: <MyStoreEditor />,
       },
       {
-        path:"/my-store/add-product",
-        element: <MyProductEditor/>
+        path: "/my-store/edit-product/:productId",
+        element: <MyProductEditor />,
       },
       {
-        path:"/cart",
-        element: <Cart/>
-      }
-    ]}
-])
+        path: "/my-store/add-product",
+        element: <MyProductEditor />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+    ],
+  },
+]);
 function App() {
-
   // useEffect(() => {
   //   document.title = 'SHOPCHABY'; // Change the title here
   // }, []);
 
   return (
     <div className="app">
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
   );
 }

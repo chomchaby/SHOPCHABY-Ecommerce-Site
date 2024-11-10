@@ -12,7 +12,3 @@ with app.app_context():
         item = Category(category_name=cat)
         db.session.add(item)
     db.session.commit()
-
-# ERROR [flask_migrate] Error: Can't locate revision identified by '041b9fffbdde'
-# in mysql shell
-# delete from alembic_version;

@@ -8,7 +8,7 @@ from flask_jwt_extended import JWTManager
 from datetime import timedelta
 from dotenv import load_dotenv
 import os
-
+load_dotenv()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False

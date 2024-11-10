@@ -45,7 +45,9 @@ const NavBar = () => {
             <div className='icons'>
               <div className="cartIcon" onClick={()=>navigate('/cart')}>
                 <ShoppingCartIcon/>
-                <span>{cartNumber!==undefined ? cartNumber:0}</span>
+                {cartNumber !== undefined && cartNumber !== 0 ? (
+                  <span>{cartNumber}</span>
+                ) : null}
               </div>
             </div>
 
