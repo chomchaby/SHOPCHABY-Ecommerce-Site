@@ -48,6 +48,10 @@ I designed the user interface and experience myself, focusing on creating a clea
 - **History System**: Implement a history system to track user activity and past transactions.
 - **Text-Based Search System**: Implement a text search functionality, allowing users to search for products by name, description, or other relevant text fields, in addition to the existing filter options.
 
+## Learn More About the Project
+I documented my journey building ShopChaby, including the challenges I faced, and the solutions I implemented, in a Medium article. Be sure to check it out.
+[Shopchaby](https://medium.com/@chomchaba.chanakiat/individual-study-2022-2-79aec1a635f8)
+
 ## View the Live Version
 
 _(This project is still under development. The website is not yet deployed.)_
